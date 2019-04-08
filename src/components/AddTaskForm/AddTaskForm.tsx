@@ -1,4 +1,5 @@
 import * as React from "react";
+import stl from "./AddTaskForm.module.sass";
 
 export interface AddTaskFormProps {
   addNewTask: Function;
@@ -34,15 +35,17 @@ class AddTaskForm extends React.Component<AddTaskFormProps, AddTaskFormState> {
     const { task } = this.state;
 
     return (
-      <form onSubmit={this.onSubmitForm}>
-        <input
-          type="text"
-          name="task"
-          onChange={this.onChangeForm}
-          value={task}
-        />
-        <button>Add task</button>
-      </form>
+      <div className={stl.addTaskForm}>
+        <form onSubmit={this.onSubmitForm}>
+          <input
+            type="text"
+            name="task"
+            onChange={this.onChangeForm}
+            value={task}
+          />
+          <button>Add task</button>
+        </form>
+      </div>
     );
   }
 }

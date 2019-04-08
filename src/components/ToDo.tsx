@@ -9,7 +9,7 @@ interface IProps {
 }
 
 interface IState {
-  //Array<{ id: number, task: string }>
+  //tasks: Array<{ id: number, task: string }>
   //tasks: { id: number; task: string }[];
   tasks: Array<any>;
 }
